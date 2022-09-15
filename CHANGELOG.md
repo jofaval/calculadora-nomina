@@ -7,3 +7,4 @@ Todos los cambios y registros aplicados o referentes al proyecto
 ### Added
 
 - Proyecto comenzado
+- CI/CD basic pipeline
