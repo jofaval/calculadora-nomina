@@ -54,7 +54,7 @@ pnpm install # preferido
 ## Motivo
 [Volver a los contenidos](#contenidos)
 
-Porque ya existen muchas, pero seguramente registren tus datos internamente (podrá estar en las políticas, pero sigue sin ser de mi agradao).
+Porque ya existen muchas, pero seguramente registren tus datos internamente (podrá estar en las políticas, pero sigue sin ser de mi agrado).
 
 ## Scripts
 [Volver a los contenidos](#contenidos)
