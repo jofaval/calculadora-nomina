@@ -13,6 +13,7 @@
     1. [Build](#build)
     1. [Testing](#testing)
 1. [Créditos](#créditos)
+1. [Autor](#autor)
 
 ## CHANGELOG
 [Volver a los contenidos](#contenidos)
@@ -90,3 +91,7 @@ pnpm run test
   - https://levelup.gitconnected.com/freedom-from-create-react-app-how-to-create-react-apps-without-cra-27fadeb79c82
   - https://dev.to/ivadyhabimana/how-to-create-a-react-app-without-using-create-react-app-a-step-by-step-guide-30nl
   - https://dev.to/deadwing7x/setup-a-react-app-using-webpack-babel-and-typescript-5927
+
+## Autor
+
+Pepe Fabra Valverde - Software Engineer, puedes contactarme a través de mi [LinkedIn](https://linkedin.com/in/jofaval).
