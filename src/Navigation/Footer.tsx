@@ -6,7 +6,9 @@ const Footer: React.FC = () => (
     <div className="footer">
       <p className="footer__title text-center">
         Checkout my other repositories at{" "}
-        <a href={linksConstants.GITHUB}>@github/jofaval</a>
+        <a href={linksConstants.GITHUB} className="link">
+          @github/jofaval
+        </a>
       </p>
     </div>
   </footer>
