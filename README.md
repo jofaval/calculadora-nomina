@@ -27,6 +27,7 @@ Integración CI/CD con Github Actions, desplegado en Github Pages.
 [jofaval.github.io/calculadora-nomina](https://jofaval.github.io/calculadora-nomina)
 
 ### Instalación
+[Volver a los contenidos](#contenidos)
 
 Para instalarte el repositorio en local:
 
