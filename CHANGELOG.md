@@ -2,6 +2,12 @@
 
 Todos los cambios y registros aplicados o referentes al proyecto
 
+## 2022-09-16
+
+### Added
+
+- Add Github Pages deployment
+
 ## 2022-09-15
 
 ### Added
