@@ -1,11 +1,16 @@
 import React from "react";
-import Header from "./Header/Header";
+import Footer from "./Navigation/Footer";
+import Header from "./Navigation/Header";
 
 const App: React.FC = () => (
-  <div className="app p-3" id="app">
+  <div className="app p-3 container mx-auto" id="app">
     <nav className="app__header">
       <Header />
     </nav>
+    <main></main>
+    <div className="app__footer">
+      <Footer />
+    </div>
   </div>
 );
 
