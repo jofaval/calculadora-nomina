@@ -8,6 +8,10 @@ Todos los cambios y registros aplicados o referentes al proyecto
 
 - Add Github Pages deployment
 
+### Modified
+
+- Changed from webpack + babel to vite
+
 ## 2022-09-15
 
 ### Added

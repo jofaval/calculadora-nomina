@@ -1,16 +1,14 @@
 {
   "name": "calculadora-nomina",
-  "version": "1.0.0",
   "description": "",
-  "main": "src/index.jsx",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "src/index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server .",
-    "build": "webpack .",
-    "css": "postcss ./src/assets/tailwind/tailwind.css -o ./src/assets/tailwind/tailwind.generated.css",
-    "prestart": "npm run css",
-    "prebuild": "cross-env NODE_ENV=production npm run css",
-    "run-server": "npx serve -s build"
+    "start": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
@@ -33,17 +31,8 @@
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.11",
-    "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.1",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
-    "style-loader": "^3.3.1",
-    "tailwindcss": "^3.1.8",
-    "ts-loader": "^9.3.1",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.0"
+    "tailwindcss": "^3.1.8"
   }
 }
