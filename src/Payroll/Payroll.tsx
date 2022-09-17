@@ -1,33 +1,8 @@
 import React from "react";
-import { useForm, SubmitHandler, FieldError } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import type { PayrollData } from "../types/payroll";
-
-const ERROR_MESSAGES: { [key: string]: string } = {
-  required: "Este campo es obligatorio",
-};
-
-const FieldWrapper: React.FC<{
-  label: string;
-  name: string;
-  children: JSX.Element;
-  errors?: FieldError;
-}> = ({ label, name, children, errors }) => (
-  <div className="payroll__form__field mb-6">
-    <>
-      <label className="payroll__form__label" htmlFor={name}>
-        {label}
-      </label>
-
-      {children}
-
-      {errors && (
-        <div className="payroll__form__field__errors text-red-500">
-          {ERROR_MESSAGES?.[errors.type]}
-        </div>
-      )}
-    </>
-  </div>
-);
+import FieldWrapper from "./FieldWrapper";
+import Situation from "./Situation";
 
 const PayrollSubmit: React.FC = () => (
   <div className="payroll__form__submit__container flex">
@@ -56,10 +31,10 @@ const PayrollSubmit: React.FC = () => (
   </div>
 );
 
-const Fieldset: React.FC<{ name: string; children: JSX.Element }> = ({
-  name,
-  children,
-}) => (
+const Fieldset: React.FC<{
+  name: string;
+  children: JSX.Element | JSX.Element[];
+}> = ({ name, children }) => (
   <fieldset className="sm:p-4 sm:border mb-3">
     <legend className="text-xl bg-white sm:p-2">{name}</legend>
     {children}
@@ -72,6 +47,7 @@ const Payroll: React.FC<{
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<PayrollData>();
   const onSubmitHandler: SubmitHandler<PayrollData> = (data) => {
@@ -94,6 +70,8 @@ const Payroll: React.FC<{
             <FieldWrapper name="name" label="Nombre:" errors={errors?.name}>
               <input {...register("name", { required: true })} className={""} />
             </FieldWrapper>
+
+            <Situation {...{ register, watch, errors }} />
           </Fieldset>
 
           <PayrollSubmit />

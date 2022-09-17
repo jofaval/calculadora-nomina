@@ -6,6 +6,16 @@ Todos los cambios y registros aplicados o referentes al proyecto
 
 ### Added
 
+- Add Family Situation component
+
+### Modified
+
+- Changed footer appereance
+
+## 2022-09-16
+
+### Added
+
 - Add Github Pages deployment
 
 ### Modified
