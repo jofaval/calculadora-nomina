@@ -2,5 +2,6 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "prettier.endOfLine": "lf",
 }
