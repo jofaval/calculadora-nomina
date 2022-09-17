@@ -92,6 +92,7 @@ pnpm run test
   - https://levelup.gitconnected.com/freedom-from-create-react-app-how-to-create-react-apps-without-cra-27fadeb79c82
   - https://dev.to/ivadyhabimana/how-to-create-a-react-app-without-using-create-react-app-a-step-by-step-guide-30nl
   - https://dev.to/deadwing7x/setup-a-react-app-using-webpack-babel-and-typescript-5927
+- Proyecto con la configuración de vite inicializada gracias a su starter cli. `npx vite`
 
 ## Autor
 [Volver a los contenidos](#contenidos)
