@@ -2,6 +2,7 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FamilySituation, RawPayrollData } from "../types/payroll";
 import FieldWrapper from "./FieldWrapper";
+import useResult from "./hooks/useResult";
 import Situation from "./Situation";
 
 const PayrollSubmit: React.FC = () => (
@@ -42,23 +43,28 @@ const Fieldset: React.FC<{
 );
 
 const Payroll: React.FC<{
-  setSubmitData: React.Dispatch<React.SetStateAction<RawPayrollData>>;
-}> = ({ setSubmitData }) => {
+  setSubmitData?: React.Dispatch<React.SetStateAction<RawPayrollData>>;
+}> = ({ setSubmitData = () => {} }) => {
   const {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors, isSubmitted },
+    getValues,
   } = useForm<RawPayrollData>({
     defaultValues: {
       name: "",
       familySituation: FamilySituation.SOLTERO,
     },
   });
+
   const onSubmitHandler: SubmitHandler<RawPayrollData> = (data) => {
     console.log(data);
     setSubmitData(data);
   };
+
+  const formData = getValues();
+  const { result } = useResult(formData);
 
   return (
     <div className="payroll__container mx-auto md:w-4/6 w-full p-3 bg-white rounded-lg">
@@ -70,6 +76,13 @@ const Payroll: React.FC<{
           <legend className="payroll__form__legend text-2xl font-bold">
             Introduce los datos que quieras estimar:
           </legend>
+
+          {isSubmitted && (
+            <div className="payroll__result__container">
+              <p className="payroll__result__title">Resultados:</p>
+              <div className="payroll__result">{result}</div>
+            </div>
+          )}
 
           <Fieldset name="Datos personales">
             <div className="flex flex-wrap">
