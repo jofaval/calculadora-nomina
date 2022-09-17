@@ -10,8 +10,9 @@ const FieldWrapper: React.FC<{
   name: string;
   children: JSX.Element | JSX.Element[];
   errors?: FieldError;
-}> = ({ label, name, children, errors }) => (
-  <div className="payroll__form__field mb-6">
+  className?: string;
+}> = ({ label, name, children, errors, className = "" }) => (
+  <div className={`payroll__form__field mb-6 ${className}`}>
     <>
       <label className="payroll__form__label" htmlFor={name}>
         {label}

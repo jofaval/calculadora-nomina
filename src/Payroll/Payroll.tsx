@@ -72,19 +72,46 @@ const Payroll: React.FC<{
           </legend>
 
           <Fieldset name="Datos personales">
-            <FieldWrapper name="name" label="Nombre:" errors={errors?.name}>
-              <input {...register("name", { required: true })} className={""} />
-            </FieldWrapper>
-            <FieldWrapper
-              name="salary"
-              label="Salario:"
-              errors={errors?.salary}
-            >
-              <input {...register("salary", { required: true })} />
-            </FieldWrapper>
-            <FieldWrapper name="age" label="Edad:" errors={errors?.age}>
-              <input {...register("age", { required: true })} />
-            </FieldWrapper>
+            <div className="flex flex-wrap">
+              <FieldWrapper
+                className="flex-1"
+                name="name"
+                label="Nombre:"
+                errors={errors?.name}
+              >
+                <input
+                  className="border p-2 rounded-lg m-2"
+                  {...register("name")}
+                  id={"name"}
+                />
+              </FieldWrapper>
+
+              <FieldWrapper
+                className="flex-1"
+                name="salary"
+                label="Salario:"
+                errors={errors?.salary}
+              >
+                <input
+                  className="border p-2 rounded-lg m-2"
+                  {...register("salary", { required: true })}
+                  id={"salary"}
+                />
+              </FieldWrapper>
+
+              <FieldWrapper
+                className="flex-1"
+                name="age"
+                label="Edad:"
+                errors={errors?.age}
+              >
+                <input
+                  className="border p-2 rounded-lg m-2"
+                  {...register("age", { required: true })}
+                  id={"age"}
+                />
+              </FieldWrapper>
+            </div>
 
             <Situation {...{ register, watch, errors }} />
           </Fieldset>
