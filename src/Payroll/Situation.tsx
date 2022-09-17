@@ -4,14 +4,14 @@ import type {
   UseFormRegister,
   UseFormWatch,
 } from "react-hook-form";
-import type { PayrollData } from "../types/payroll";
+import { FamilySituation, RawPayrollData } from "../types/payroll";
 import FieldWrapper from "./FieldWrapper";
 
 const FIELD_ID = "familySituation";
 
 const SituationOption: React.FC<{
-  register: UseFormRegister<PayrollData>;
-  watch: UseFormWatch<PayrollData>;
+  register: UseFormRegister<RawPayrollData>;
+  watch: UseFormWatch<RawPayrollData>;
   id: string;
   label: string;
   description?: string | JSX.Element;
@@ -50,9 +50,9 @@ const SituationOption: React.FC<{
 };
 
 const Situation: React.FC<{
-  register: UseFormRegister<PayrollData>;
-  watch: UseFormWatch<PayrollData>;
-  errors: FieldErrorsImpl<PayrollData>;
+  register: UseFormRegister<RawPayrollData>;
+  watch: UseFormWatch<RawPayrollData>;
+  errors: FieldErrorsImpl<RawPayrollData>;
 }> = ({ register, watch, errors }) => (
   <FieldWrapper
     label={<p className="mb-3 text-lg text-center">Situación familiar</p>}
@@ -63,7 +63,7 @@ const Situation: React.FC<{
         register={register}
         watch={watch}
         label={"Soltero"}
-        id={"soltero"}
+        id={FamilySituation.SOLTERO}
         description={
           <p>Soltero, viudo, divorciado o separado con hijos a cargo</p>
         }
@@ -72,7 +72,7 @@ const Situation: React.FC<{
         register={register}
         watch={watch}
         label={"Casado"}
-        id={"casado"}
+        id={FamilySituation.CASADO}
         description={
           <p>
             Casado y cuyo cónyuge no obtiene rentas superiores a 1.500 euros
@@ -84,7 +84,7 @@ const Situation: React.FC<{
         register={register}
         watch={watch}
         label={"Otros"}
-        id={"otros"}
+        id={FamilySituation.OTROS}
         description={
           <p>
             Otros. Soltero sin hijos, casado con o sin hijos y con cónyuge con

@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import type { PayrollData } from "../types/payroll";
+import { FamilySituation, RawPayrollData } from "../types/payroll";
 import FieldWrapper from "./FieldWrapper";
 import Situation from "./Situation";
 
@@ -42,20 +42,20 @@ const Fieldset: React.FC<{
 );
 
 const Payroll: React.FC<{
-  setSubmitData: React.Dispatch<React.SetStateAction<PayrollData>>;
+  setSubmitData: React.Dispatch<React.SetStateAction<RawPayrollData>>;
 }> = ({ setSubmitData }) => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<PayrollData>({
+  } = useForm<RawPayrollData>({
     defaultValues: {
       name: "",
-      familySituation: "soltero",
+      familySituation: FamilySituation.SOLTERO,
     },
   });
-  const onSubmitHandler: SubmitHandler<PayrollData> = (data) => {
+  const onSubmitHandler: SubmitHandler<RawPayrollData> = (data) => {
     console.log(data);
     setSubmitData(data);
   };
@@ -74,6 +74,16 @@ const Payroll: React.FC<{
           <Fieldset name="Datos personales">
             <FieldWrapper name="name" label="Nombre:" errors={errors?.name}>
               <input {...register("name", { required: true })} className={""} />
+            </FieldWrapper>
+            <FieldWrapper
+              name="salary"
+              label="Salario:"
+              errors={errors?.salary}
+            >
+              <input {...register("salary", { required: true })} />
+            </FieldWrapper>
+            <FieldWrapper name="age" label="Edad:" errors={errors?.age}>
+              <input {...register("age", { required: true })} />
             </FieldWrapper>
 
             <Situation {...{ register, watch, errors }} />
