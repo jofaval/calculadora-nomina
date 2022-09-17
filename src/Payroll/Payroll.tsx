@@ -49,7 +49,12 @@ const Payroll: React.FC<{
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<PayrollData>();
+  } = useForm<PayrollData>({
+    defaultValues: {
+      name: "",
+      familySituation: "soltero",
+    },
+  });
   const onSubmitHandler: SubmitHandler<PayrollData> = (data) => {
     console.log(data);
     setSubmitData(data);
