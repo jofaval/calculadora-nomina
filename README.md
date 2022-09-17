@@ -1,11 +1,12 @@
 # Calculadora de nómina
 
-![NPM](https://img.shields.io/badge/npm-8.11.0-green?color=green&style=flat)&nbsp;![Node.js](https://img.shields.io/badge/node-v15.14.0-green?color=green&style=flat)&nbsp;![PNPM](https://img.shields.io/badge/pnpm-7.11.0-yellow?color=yellow&style=flat)&nbsp;![React](https://img.shields.io/badge/react-18.2.0-blue?color=blue&style=flat)&nbsp;![TypeScript](https://img.shields.io/badge/typescript-4.8.3-blue?color=blue&style=flat)
+![NPM](https://img.shields.io/badge/npm-8.12.1-green?color=green&style=flat)&nbsp;![Node.js](https://img.shields.io/badge/node-v15.14.0-green?color=green&style=flat)&nbsp;![PNPM](https://img.shields.io/badge/pnpm-7.11.0-yellow?color=yellow&style=flat)&nbsp;![React](https://img.shields.io/badge/react-18.2.0-blue?color=blue&style=flat)&nbsp;![TypeScript](https://img.shields.io/badge/typescript-4.8.3-blue?color=blue&style=flat)
 
 ## Contenidos
 
 1. [CHANGELOG](#changelog)
 1. [Despliegue](#despliegue)
+    1. [Instalación](#instalación)
 1. [Tech stack](#tech-stack)
 1. [Motivo](#motivo)
 1. [Scripts](#scripts)
