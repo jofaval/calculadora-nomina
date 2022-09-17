@@ -7,6 +7,8 @@ import type {
 import type { PayrollData } from "../types/payroll";
 import FieldWrapper from "./FieldWrapper";
 
+const FIELD_ID = "familySituation";
+
 const SituationOption: React.FC<{
   register: UseFormRegister<PayrollData>;
   watch: UseFormWatch<PayrollData>;
@@ -14,11 +16,8 @@ const SituationOption: React.FC<{
   label: string;
   description?: string | JSX.Element;
 }> = ({ register, watch, id, label, description }) => {
-  const _id = useMemo(() => `familySituation-${id}`, [id]);
-  const checked = useMemo(
-    () => watch("familySituation") === id,
-    [watch("familySituation")]
-  );
+  const _id = useMemo(() => `${FIELD_ID}-${id}`, [id]);
+  const checked = useMemo(() => watch(FIELD_ID) === id, [watch(FIELD_ID)]);
   console.log(id, checked);
 
   return (
@@ -36,12 +35,12 @@ const SituationOption: React.FC<{
           className="hidden"
         />
 
-        <div className="situation__label__text text-xl font-bold text-center text-white cursor-pointer">
+        <div className="situation__label__text text-xl font-bold text-center text-white select-none">
           {label}
         </div>
 
         {description && (
-          <div className="situation__description cursor-pointer">
+          <div className="situation__description select-none">
             {description}
           </div>
         )}
@@ -96,7 +95,7 @@ const Situation: React.FC<{
     </div>
 
     <div className="situation__errors text-red-500">
-      {errors?.familySituation && "Has de elegir alguna opción"}
+      {errors?.[FIELD_ID] && "Has de elegir alguna opción"}
     </div>
   </FieldWrapper>
 );
