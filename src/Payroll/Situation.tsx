@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import {
+import type {
   FieldErrorsImpl,
   UseFormRegister,
   UseFormWatch,
 } from "react-hook-form";
-import { PayrollData } from "../types/payroll";
+import type { PayrollData } from "../types/payroll";
 import FieldWrapper from "./FieldWrapper";
 
 const SituationOption: React.FC<{

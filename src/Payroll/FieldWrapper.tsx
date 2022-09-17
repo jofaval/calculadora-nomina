@@ -1,5 +1,5 @@
 import React from "react";
-import { FieldError } from "react-hook-form";
+import type { FieldError } from "react-hook-form";
 
 const ERROR_MESSAGES: { [key: string]: string } = {
   required: "Este campo es obligatorio",
