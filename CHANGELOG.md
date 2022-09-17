@@ -7,6 +7,8 @@ Todos los cambios y registros aplicados o referentes al proyecto
 ### Added
 
 - Add Family Situation component
+- Added extra components (salary and age)
+- Added result hook and visualization (base concept)
 
 ### Modified
 
