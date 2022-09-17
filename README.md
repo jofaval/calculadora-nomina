@@ -4,17 +4,22 @@
 
 ## Contenidos
 
+1. [Motivo](#motivo)
 1. [CHANGELOG](#changelog)
 1. [Despliegue](#despliegue)
     1. [Instalación](#instalación)
 1. [Tech stack](#tech-stack)
-1. [Motivo](#motivo)
 1. [Scripts](#scripts)
     1. [Entorno de desarrollo](#entorno-de-desarrollo)
     1. [Build](#build)
     1. [Testing](#testing)
 1. [Créditos](#créditos)
 1. [Autor](#autor)
+
+## Motivo
+[Volver a los contenidos](#contenidos)
+
+Porque ya existen muchas, pero seguramente registren tus datos internamente (podrá estar en las políticas, pero sigue sin ser de mi agrado).
 
 ## CHANGELOG
 [Volver a los contenidos](#contenidos)
@@ -53,11 +58,6 @@ pnpm install # preferido
 - React + TypeScript
 - PNPM
 - Tailwindcss
-
-## Motivo
-[Volver a los contenidos](#contenidos)
-
-Porque ya existen muchas, pero seguramente registren tus datos internamente (podrá estar en las políticas, pero sigue sin ser de mi agrado).
 
 ## Scripts
 [Volver a los contenidos](#contenidos)
