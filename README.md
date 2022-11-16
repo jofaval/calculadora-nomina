@@ -7,26 +7,29 @@
 1. [Motivo](#motivo)
 1. [CHANGELOG](#changelog)
 1. [Despliegue](#despliegue)
-    1. [Instalación](#instalación)
+   1. [Instalación](#instalación)
 1. [Tech stack](#tech-stack)
 1. [Scripts](#scripts)
-    1. [Entorno de desarrollo](#entorno-de-desarrollo)
-    1. [Build](#build)
-    1. [Testing](#testing)
+   1. [Entorno de desarrollo](#entorno-de-desarrollo)
+   1. [Build](#build)
+   1. [Testing](#testing)
 1. [Créditos](#créditos)
 1. [Autor](#autor)
 
 ## Motivo
+
 [Volver a los contenidos](#contenidos)
 
 Porque ya existen muchas, pero seguramente registren tus datos internamente (podrá estar en las políticas, pero sigue sin ser de mi agrado).
 
 ## CHANGELOG
+
 [Volver a los contenidos](#contenidos)
 
 En el fichero con el mismo nombre, [CHANGELOG.md](./CHANGELOG.md).
 
 ## Despliegue
+
 [Volver a los contenidos](#contenidos)
 
 Integración CI/CD con Github Actions, desplegado en Github Pages.
@@ -34,6 +37,7 @@ Integración CI/CD con Github Actions, desplegado en Github Pages.
 [jofaval.github.io/calculadora-nomina](https://jofaval.github.io/calculadora-nomina)
 
 ### Instalación
+
 [Volver a los contenidos](#contenidos)
 
 Para instalarte el repositorio en local:
@@ -53,6 +57,7 @@ pnpm install # preferido
 ```
 
 ## Tech stack
+
 [Volver a los contenidos](#contenidos)
 
 - React + TypeScript
@@ -60,9 +65,11 @@ pnpm install # preferido
 - Tailwindcss
 
 ## Scripts
+
 [Volver a los contenidos](#contenidos)
 
 ### Entorno de desarrollo
+
 [Volver a los contenidos](#contenidos)
 
 ```bash
@@ -70,6 +77,7 @@ pnpm run start
 ```
 
 ### Build
+
 [Volver a los contenidos](#contenidos)
 
 ```bash
@@ -77,6 +85,7 @@ pnpm run build
 ```
 
 ### Testing
+
 [Volver a los contenidos](#contenidos)
 
 Dadas las dimensiones del proyecto, testing no será necesario
@@ -86,6 +95,7 @@ pnpm run test
 ```
 
 ## Créditos
+
 [Volver a los contenidos](#contenidos)
 
 - Proyecto de React y TypeScript sin CRA (Create React App)
@@ -95,6 +105,7 @@ pnpm run test
 - Proyecto con la configuración de vite inicializada gracias a su starter cli. `npx vite`
 
 ## Autor
+
 [Volver a los contenidos](#contenidos)
 
 Pepe Fabra Valverde - Software Engineer, puedes contactarme a través de mi [LinkedIn](https://linkedin.com/in/jofaval).
