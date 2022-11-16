@@ -10,7 +10,7 @@ const toggleDisclosureClass = (open: boolean): string =>
 const App: React.FC = () => (
   <div className="app__container bg-gradient-to-br from-green-500 via-blue-500 to-cyan-500 w-full">
     <div
-      className="app p-3 container mx-auto min-h-screen flex flex-col justify-start align-items-center"
+      className="app px-3 container mx-auto min-h-screen flex flex-col justify-between align-items-center gap-4"
       id="app"
     >
       <nav className="app__header">
