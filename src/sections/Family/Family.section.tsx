@@ -1,7 +1,15 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
-import { Payroll } from "Payroll";
+import { Checkbox } from "components/Checkbox";
 import { toggleDisclosureClass } from "sections/utils/css-class.utils";
+
+function FamilyFields() {
+  return (
+    <>
+      <Checkbox label="Lorem ipsum" />
+    </>
+  );
+}
 
 export function Family() {
   return (
@@ -14,7 +22,7 @@ export function Family() {
           </Disclosure.Button>
 
           <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm">
-            <Payroll />
+            <FamilyFields />
           </Disclosure.Panel>
         </>
       )}
