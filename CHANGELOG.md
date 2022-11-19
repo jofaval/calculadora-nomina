@@ -1,6 +1,50 @@
-# CHANGELOG #
+# CHANGELOG
 
 Todos los cambios y registros aplicados o referentes al proyecto
+
+## 2022-11-19
+
+### Added
+
+- Various components (inputs, Disclosure, Combobox[Select])
+- Some base fields, as to start populating the sections
+
+### Modified
+
+- Refactor the app into a Main layout
+- Modified the sections distribution, internally
+
+## 2022-11-16
+
+### Added
+
+- Installed the HeadlessUI package for React and zustand
+  - It now uses absolute paths configured via plugin
+
+### Modified
+
+- Integrated HeadlessUI's Disclosure for the sections
+- Adjust it's flexibility (layout-wise)
+
+## 2022-09-17
+
+### Added
+
+- Add gradients to the visual style
+- Change the inputs style
+- Added a base hook for the result's (will probably be modified, most likely)
+- Created a family situation descriptor component
+
+### Modified
+
+- Modified the README, navigation
+- Use of `import type` over `import`
+- Document the credits
+- Configure the vscode settings
+
+### Critical
+
+- Updated node's version
 
 ## 2022-09-16
 
