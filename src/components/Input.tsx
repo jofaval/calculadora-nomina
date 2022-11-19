@@ -1,13 +1,15 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { joinClasses } from "utils/css.utils";
 
-export type InputProps<TData> = Pick<
-  HTMLInputElement,
-  "type" | "className" | "max" | "min" | "step"
-> & {
-  onChange?: (value: TData | undefined) => void;
+export type InputProps<TData> = {
+  type?: HTMLInputElement["type"];
+  className?: HTMLInputElement["className"];
+  max?: HTMLInputElement["max"];
+  min?: HTMLInputElement["min"];
+  step?: HTMLInputElement["step"];
+  required?: HTMLInputElement["required"];
+  onChange?: (value: unknown) => void;
 };
-
 export const Input = <TData extends HTMLInputElement["value"]>({
   type: inputType = "text",
   onChange,
@@ -29,7 +31,7 @@ export const Input = <TData extends HTMLInputElement["value"]>({
 
   useEffect(() => {
     if (onChange) {
-      onChange(value);
+      onChange(value ?? ("" as TData));
     }
   }, [value]);
 

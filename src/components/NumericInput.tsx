@@ -8,10 +8,12 @@ export const NumericInput: React.FC<NumericInputProps> = ({
   min = -Infinity,
   className = "",
   step = 1,
+  ...inputProps
 }) => (
   <Input
     type={"number" as string}
     {...{
+      ...inputProps,
       max: max.toString(),
       min: min.toString(),
       className: joinClasses("shadow", className),
