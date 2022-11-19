@@ -1,18 +1,18 @@
-import {
-  ChangeEvent,
-  HTMLInputTypeAttribute,
-  useEffect,
-  useState,
-} from "react";
+import { ChangeEvent, useEffect, useState } from "react";
+import { joinClasses } from "utils/css.utils";
 
-type InputProps<TData> = {
-  type: HTMLInputTypeAttribute;
+export type InputProps<TData> = Pick<
+  HTMLInputElement,
+  "type" | "className" | "max" | "min" | "step"
+> & {
   onChange?: (value: TData | undefined) => void;
 };
 
 export const Input = <TData extends HTMLInputElement["value"]>({
   type: inputType = "text",
   onChange,
+  className = "",
+  ...inputProps
 }: InputProps<TData>): JSX.Element => {
   const [value, setValue] = useState<TData>();
 
@@ -33,5 +33,16 @@ export const Input = <TData extends HTMLInputElement["value"]>({
     }
   }, [value]);
 
-  return <input type={inputType} value={value} onChange={onChangeHandler} />;
+  return (
+    <input
+      {...{
+        ...inputProps,
+        type: inputType,
+        value: value,
+        checked: !!value,
+        onChange: onChangeHandler,
+        className: joinClasses("border", className),
+      }}
+    />
+  );
 };
