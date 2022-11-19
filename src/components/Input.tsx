@@ -2,18 +2,25 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { joinClasses } from "utils/css.utils";
 
 export type InputProps<TData> = {
-  type?: HTMLInputElement["type"];
   className?: HTMLInputElement["className"];
+  id?: string;
+  label: string | JSX.Element | JSX.Element[];
   max?: HTMLInputElement["max"];
   min?: HTMLInputElement["min"];
-  step?: HTMLInputElement["step"];
-  required?: HTMLInputElement["required"];
+  name: string;
   onChange?: (value: unknown) => void;
+  required?: HTMLInputElement["required"];
+  step?: HTMLInputElement["step"];
+  type?: HTMLInputElement["type"];
 };
+
 export const Input = <TData extends HTMLInputElement["value"]>({
   type: inputType = "text",
   onChange,
   className = "",
+  label,
+  id,
+  name,
   ...inputProps
 }: InputProps<TData>): JSX.Element => {
   const [value, setValue] = useState<TData>();
@@ -36,15 +43,26 @@ export const Input = <TData extends HTMLInputElement["value"]>({
   }, [value]);
 
   return (
-    <input
-      {...{
-        ...inputProps,
-        type: inputType,
-        value: value,
-        checked: !!value,
-        onChange: onChangeHandler,
-        className: joinClasses("border", className),
-      }}
-    />
+    <div className="input-container">
+      {label && (
+        <>
+          <label id={id ?? name}>{label}:</label>
+          <br />
+        </>
+      )}
+
+      <input
+        {...{
+          ...inputProps,
+          checked: !!value,
+          className: joinClasses("border", className),
+          id: id ?? name,
+          name: name,
+          onChange: onChangeHandler,
+          type: inputType,
+          value: value,
+        }}
+      />
+    </div>
   );
 };
