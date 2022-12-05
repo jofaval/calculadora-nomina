@@ -6,7 +6,7 @@
 
 1. [Motivo](#motivo)
 1. [CHANGELOG](#changelog)
-1. [Diseño](#)
+1. [Diseño](#diseño)
 1. [Despliegue](#despliegue)
    1. [Instalación](#instalación)
 1. [Tech stack](#tech-stack)
@@ -27,7 +27,7 @@ Porque ya existen muchas, pero seguramente registren tus datos internamente (pod
 
 [Volver a los contenidos](#contenidos)
 
-![Formulario](./design/form.excalidraw.png)
+![Formulario](./design/form-view.excalidraw.png)
 
 ## CHANGELOG
 
