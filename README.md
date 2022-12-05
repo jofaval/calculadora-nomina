@@ -6,6 +6,7 @@
 
 1. [Motivo](#motivo)
 1. [CHANGELOG](#changelog)
+1. [Diseño](#)
 1. [Despliegue](#despliegue)
    1. [Instalación](#instalación)
 1. [Tech stack](#tech-stack)
@@ -21,6 +22,12 @@
 [Volver a los contenidos](#contenidos)
 
 Porque ya existen muchas, pero seguramente registren tus datos internamente (podrá estar en las políticas, pero sigue sin ser de mi agrado).
+
+## Diseño
+
+[Volver a los contenidos](#contenidos)
+
+![Formulario](./design/form.excalidraw.png)
 
 ## CHANGELOG
 

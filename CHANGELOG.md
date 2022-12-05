@@ -2,6 +2,12 @@
 
 Todos los cambios y registros aplicados o referentes al proyecto
 
+## 2022-12-05
+
+### Added
+
+- Define some base design concepts
+
 ## 2022-11-19
 
 ### Added
